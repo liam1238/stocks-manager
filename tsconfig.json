@@ -1,10 +1,15 @@
 {
   "extends": "./tsconfig.base.json",
-  "compileOnSave": false,
   "files": [],
   "references": [
     {
-      "path": "./apps/stock-manager"
+      "path": "apps/stock-manager"
+    },
+    {
+      "path": "apps/backend"
+    },
+    {
+      "path": "apps/frontend"
     }
   ]
 }

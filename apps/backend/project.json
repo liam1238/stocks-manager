@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "sourceRoot": "apps/backend/src",
+  "root": "apps/backend",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/nest:build",
+      "options": {
+        "outputPath": "dist/apps/backend",
+        "main": "apps/backend/src/main.ts",
+        "tsConfig": "apps/backend/tsconfig.app.json",
+        "assets": ["apps/backend/src/assets"]
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/nest:serve",
+      "options": {
+        "buildTarget": "backend:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/backend/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/backend"],
+      "options": {
+        "jestConfig": "apps/backend/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
