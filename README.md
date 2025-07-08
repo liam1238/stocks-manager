@@ -31,11 +31,25 @@ A full-stack stock portfolio management application built with:
 ```bash
 git clone https://github.com/liam1238/stock-manager.git
 cd stock-manager
+```
 
+### 2. Install dependencies (root) 
+```bash 
+npm install
+```
 
-2. Install dependencies (root) - npm install
+### 3. Environment Variables
+```bash
+# Example for backend:
+MONGODB_URI=mongodb://localhost:27017/stock-portfolio
+FMP_API_KEY=your_api_key
 
-3. Run: 
+# Example for frontend:
+VITE_API_BASE_URL=http://localhost:3000/api
+```
+
+### 4. Run: 
+```bash
 # Frontend
 cd apps/frontend
 npm run dev
@@ -43,3 +57,4 @@ npm run dev
 # Backend
 cd apps/backend
 npm run start:dev
+```
